@@ -134,6 +134,42 @@
 * ### **Tipos de datos básicos**
 
   El tipado para las variables que contienen estos datos, no necesariamente deben definirse de forma manual, puesto que este lenguaje puede inferir el tipo de forma automática.
+
+  ```typescript
+  // type: string
+  const nombre: string = "Jorge";
+  const nombre: string = 5; // Type Error
+  
+  // type: number
+  const edad: number = 32;
+  const edad: number = "cinco" // Type Error
+
+  // type: boolean
+  const alive: boolean = true;
+  const alive: boolean = "vivo"; // Type Error
+
+  // type: number[]
+  const numPares: number[] = [2, 4, 6, 8 , 10];
+  const numPares: number[] = [2, 4, 6, 8 , "diez"]; // Type Error
+
+  // type: [number]
+  const num: [number] = [5];
+  const num: [number] = [5, 7]; // Type Error
+
+  // type: string[]
+  const palabras: string[] = ["Hola", "Chau", "Jorge"];
+  const palabras: string[] = ["Hola", "Chau", false]; // Type Error
+
+  // type: [string]
+  const palabra: [string] = ["Hola"];
+  const palabra: [string] = ["Hola", "Adios"]; // Type Error
+  
+  // type: any => Sin inferencia de dato.
+  const unaVariable: any = "Hola";
+  unaVariable = 5;
+  unaVariable = true;
+  unaVariable = ["Hola", 5, true];
+  ```
 ***
 
 > ## ***Cierre***
